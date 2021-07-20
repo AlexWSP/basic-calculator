@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+* {
+  font-family: 'Roboto', sans-serif;
+  font-size: large;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  text-align: center;
+  border: 10px solid black;
+  background: white;
+  border-radius: 5px;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(60px, auto);
+}
+
+input[type="text"] {
+  height: 75px;
+  width: 249px;
+  background-color: white;
+  border: 0px;
+  color: black;
+  text-align: right;
+  font-size: xx-large;
+}
+
+#clear {
+  grid-column: 1/3;
+}
+
+#equals {
+  grid-column: 3/5;
+}
+
+button {
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  background: lightgray;
+  color: black;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+  outline: none;
+}
+
+.highlight {
+  background: gray;
+}
+
+@media only screen and (max-width: 600px) {
+  .App {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .App {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .App {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .App {
+    width: 30%;
+  }
+}
